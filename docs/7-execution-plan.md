@@ -33,102 +33,102 @@
 ### DB-01. PostgreSQL 연결/환경 구성
 
 완료 조건:
-- [ ] `DATABASE_URL` 기반 연결이 가능하다.
-- [ ] 개발/운영 DB 환경 변수가 분리된다.
-- [ ] 연결 실패가 명확한 오류로 전파된다.
+- [x] `DATABASE_URL` 기반 연결이 가능하다.
+- [x] 개발/운영 DB 환경 변수가 분리된다.
+- [x] 연결 실패가 명확한 오류로 전파된다.
 
 의존성:
-- [ ] 없음
+- [x] 없음
 
 ### DB-02. 마이그레이션 구조 수립
 
 완료 조건:
-- [ ] `schema.sql` 또는 `migrations/001-...sql` 구조가 준비된다.
-- [ ] 마이그레이션 실행/재실행 방식이 정리된다.
-- [ ] 롤백 필요 여부가 결정된다.
+- [x] `schema.sql` 또는 `migrations/001-...sql` 구조가 준비된다.
+- [x] 마이그레이션 실행/재실행 방식이 정리된다.
+- [x] 롤백 필요 여부가 결정된다.
 
 의존성:
-- [ ] DB-01 완료
+- [x] DB-01 완료
 
 ### DB-03. 핵심 테이블 생성
 
 완료 조건:
-- [ ] `users(id, email, password_hash, created_at)` 테이블이 생성된다.
-- [ ] `categories(id, user_id, name, created_at)` 테이블이 생성된다.
-- [ ] `todos(id, user_id, category_id, title, description, status, due_date, created_at, completed_at)` 테이블이 생성된다.
-- [ ] 평문 비밀번호 컬럼이 없다.
+- [x] `users(id, email, password_hash, created_at)` 테이블이 생성된다.
+- [x] `categories(id, user_id, name, created_at)` 테이블이 생성된다.
+- [x] `todos(id, user_id, category_id, title, description, status, due_date, created_at, completed_at)` 테이블이 생성된다.
+- [x] 평문 비밀번호 컬럼이 없다.
 
 의존성:
-- [ ] DB-02 완료
+- [x] DB-02 완료
 
 ### DB-04. 제약조건/FK/삭제 정책 적용
 
 완료 조건:
-- [ ] `users.email` unique 제약이 적용된다.
-- [ ] `categories(user_id, name)` unique 제약이 적용된다.
-- [ ] `todos.status IN ('in_progress', 'done')` 제약이 적용된다.
-- [ ] `title <= 100`, `category.name <= 20` 제약이 적용된다.
-- [ ] 사용자 삭제 시 Category/Todo가 cascade 삭제된다.
-- [ ] Category 삭제 시 Todo `category_id`가 `SET NULL` 처리된다.
+- [x] `users.email` unique 제약이 적용된다.
+- [x] `categories(user_id, name)` unique 제약이 적용된다.
+- [x] `todos.status IN ('in_progress', 'done')` 제약이 적용된다.
+- [x] `title <= 100`, `category.name <= 20` 제약이 적용된다.
+- [x] 사용자 삭제 시 Category/Todo가 cascade 삭제된다.
+- [x] Category 삭제 시 Todo `category_id`가 `SET NULL` 처리된다.
 
 의존성:
-- [ ] DB-03 완료
+- [x] DB-03 완료
 
 ### DB-05. 카테고리 20개 제한 보장
 
 완료 조건:
-- [ ] 제한 보장 위치가 결정된다.
-- [ ] 동시 생성 요청에서도 21번째 생성이 실패한다.
-- [ ] 실패 시 API에서 명확한 오류로 변환 가능하다.
+- [x] 제한 보장 위치가 결정된다.
+- [x] 동시 생성 요청에서도 21번째 생성이 실패한다.
+- [x] 실패 시 API에서 명확한 오류로 변환 가능하다.
 
 의존성:
-- [ ] DB-04 완료
+- [x] DB-04 완료
 
 ### DB-06. 조회 성능 인덱스 설계
 
 완료 조건:
-- [ ] `todos(user_id, created_at)` 인덱스가 검토/적용된다.
-- [ ] `todos(user_id, category_id)` 인덱스가 검토/적용된다.
-- [ ] `todos(user_id, status)` 인덱스가 검토/적용된다.
-- [ ] `todos(user_id, status, due_date)` 또는 partial index가 검토/적용된다.
-- [ ] `categories(user_id, created_at)` 인덱스가 검토/적용된다.
+- [x] `todos(user_id, created_at)` 인덱스가 검토/적용된다.
+- [x] `todos(user_id, category_id)` 인덱스가 검토/적용된다.
+- [x] `todos(user_id, status)` 인덱스가 검토/적용된다.
+- [x] `todos(user_id, status, due_date)` 또는 partial index가 검토/적용된다.
+- [x] `categories(user_id, created_at)` 인덱스가 검토/적용된다.
 
 의존성:
-- [ ] DB-04 완료
+- [x] DB-04 완료
 
 ### DB-07. Repository 쿼리 규칙 확정
 
 완료 조건:
-- [ ] 모든 SQL이 parameterized query로 작성된다.
-- [ ] Todo/Category 조회/수정/삭제 쿼리에 `user_id` 조건이 포함된다.
-- [ ] `categoryId`, `status`, `overdue` 필터 조합이 안전하게 처리된다.
+- [x] 모든 SQL이 parameterized query로 작성된다.
+- [x] Todo/Category 조회/수정/삭제 쿼리에 `user_id` 조건이 포함된다.
+- [x] `categoryId`, `status`, `overdue` 필터 조합이 안전하게 처리된다.
 
 의존성:
-- [ ] DB-06 완료
+- [x] DB-06 완료
 
 ### DB-08. 상태/완료일시 정합성 쿼리 준비
 
 완료 조건:
-- [ ] `done` 전환 시 `completed_at = now()` 처리가 가능하다.
-- [ ] `in_progress` 전환 시 `completed_at = NULL` 처리가 가능하다.
-- [ ] 완료 Todo는 overdue 조회에서 제외된다.
+- [x] `done` 전환 시 `completed_at = now()` 처리가 가능하다.
+- [x] `in_progress` 전환 시 `completed_at = NULL` 처리가 가능하다.
+- [x] 완료 Todo는 overdue 조회에서 제외된다.
 
 의존성:
-- [ ] DB-07 완료
+- [x] DB-07 완료
 
 ### DB-09. DB 검증 테스트
 
 완료 조건:
-- [ ] 빈 DB에서 마이그레이션이 성공한다.
-- [ ] 중복 이메일 저장이 실패한다.
-- [ ] 동일 사용자 카테고리명 중복 저장이 실패한다.
-- [ ] 다른 사용자 간 동일 카테고리명은 허용된다.
-- [ ] 카테고리 삭제 시 Todo `category_id`가 NULL로 변경된다.
-- [ ] status/title/category 제약 위반이 실패한다.
+- [x] 빈 DB에서 마이그레이션이 성공한다.
+- [x] 중복 이메일 저장이 실패한다.
+- [x] 동일 사용자 카테고리명 중복 저장이 실패한다.
+- [x] 다른 사용자 간 동일 카테고리명은 허용된다.
+- [x] 카테고리 삭제 시 Todo `category_id`가 NULL로 변경된다.
+- [x] status/title/category 제약 위반이 실패한다.
 
 의존성:
-- [ ] DB-03 완료
-- [ ] DB-04 완료
+- [x] DB-03 완료
+- [x] DB-04 완료
 
 ---
 
