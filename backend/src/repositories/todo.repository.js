@@ -56,7 +56,7 @@ async function findTodosByUserId(userId, { status, categoryId, uncategorized, ov
     }
   }
 
-  const whereClause = conditions.length > 1 ? conditions.join(' AND ') : '1=1';
+  const whereClause = conditions.length > 0 ? conditions.join(' AND ') : '1=1';
   const { rows } = await query(
     `${TODO_SELECT} WHERE ${whereClause} ORDER BY t.created_at DESC`,
     params

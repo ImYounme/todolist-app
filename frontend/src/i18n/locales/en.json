@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "TodoList"
+  },
+  "nav": {
+    "todos": "Tasks",
+    "profile": "Profile",
+    "logout": "Logout",
+    "manageCategories": "Manage Categories"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "Email address",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Login",
+    "signupButton": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Login",
+    "signupLink": "Sign Up",
+    "logoutSuccess": "Logged out successfully.",
+    "loginRequired": "Login is required.",
+    "emailRequired": "Please enter your email.",
+    "emailInvalid": "Please enter a valid email address.",
+    "passwordRequired": "Please enter your password.",
+    "passwordMinLength": "Password must be at least {{count}} characters."
+  },
+  "todo": {
+    "title": "Tasks",
+    "add": "Add Task",
+    "create": "Add New Task",
+    "edit": "Edit Task",
+    "delete": "Delete Task",
+    "deleteConfirm": "Delete this task?",
+    "deleteMessage": "Deleted tasks will be removed from the list.",
+    "titleField": "Title",
+    "titlePlaceholder": "Task title",
+    "description": "Description",
+    "descriptionPlaceholder": "Detailed description",
+    "dueDate": "Due Date",
+    "category": "Category",
+    "selectCategory": "Select Category",
+    "noCategory": "Uncategorized",
+    "status": "Status",
+    "inProgress": "In Progress",
+    "done": "Done",
+    "complete": "Mark as Done",
+    "reopen": "Reopen",
+    "createdAt": "Created",
+    "completedAt": "Completed",
+    "overdue": "Overdue",
+    "empty": "No tasks yet.",
+    "emptyHint": "Use the Add Task button above to get started.",
+    "noResults": "No tasks match your filters.",
+    "resetFilter": "Reset Filters",
+    "save": "Save",
+    "cancel": "Cancel",
+    "titleRequired": "Title is required.",
+    "titleMaxLength": "Title must be 100 characters or less.",
+    "uncategorized": "Uncategorized"
+  },
+  "category": {
+    "title": "Manage Categories",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this category?",
+    "deleteMessage": "Associated tasks will become uncategorized.",
+    "name": "Category Name",
+    "namePlaceholder": "New category name",
+    "nameRequired": "Category name is required.",
+    "nameMaxLength": "Name must be 20 characters or less.",
+    "empty": "No categories yet.",
+    "save": "Save",
+    "cancel": "Cancel",
+    "count": "{{count}} / 20 categories",
+    "limitReached": "Category limit (20) reached.",
+    "duplicateName": "Category name already exists."
+  },
+  "filter": {
+    "all": "All",
+    "inProgress": "In Progress",
+    "done": "Done",
+    "overdue": "Overdue",
+    "uncategorized": "Uncategorized"
+  },
+  "view": {
+    "list": "List",
+    "calendar": "Calendar"
+  },
+  "calendar": {
+    "prev": "Prev",
+    "today": "Today",
+    "next": "Next",
+    "noDueDate": "Tasks Without Dates",
+    "year": "Year",
+    "month": "Month"
+  },
+  "summary": {
+    "title": "Summary",
+    "total": "Total",
+    "noDate": "No date",
+    "doneRate": "Completion"
+  },
+  "profile": {
+    "title": "Profile",
+    "accountInfo": "Account Info",
+    "email": "Email",
+    "joinedAt": "Joined",
+    "logout": "Logout",
+    "back": "Back"
+  },
+  "error": {
+    "loadFailed": "Failed to load.",
+    "saveFailed": "Failed to save.",
+    "deleteFailed": "Failed to delete.",
+    "retry": "Retry",
+    "close": "Close",
+    "unauthorized": "Authentication required.",
+    "forbidden": "Permission denied.",
+    "notFound": "Resource not found.",
+    "serverError": "Server error occurred.",
+    "unknown": "An unknown error occurred.",
+    "invalidCredentials": "Invalid email or password.",
+    "duplicateEmail": "Email already in use."
+  },
+  "common": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "deleting": "Deleting...",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "language": {
+    "select": "Language",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

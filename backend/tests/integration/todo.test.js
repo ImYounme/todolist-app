@@ -337,8 +337,22 @@ describe('GET /api/todos with filters', () => {
     expect(res.status).toBe(200);
   });
 
-  test('status와 overdue 함께 사용하면 400을 반환한다', async () => {
-    todoService.getTodos.mockRejectedValueOnce(new ValidationError('status와 overdue는 함께 사용할 수 없습니다.'));
+  test('status=in_progress와 overdue를 함께 전달할 수 있다', async () => {
+    todoService.getTodos.mockResolvedValueOnce([makeTodo({ isOverdue: true })]);
+    const res = await request(app)
+      .get('/api/todos?status=in_progress&overdue=true')
+      .set('Authorization', `Bearer ${makeToken()}`);
+    expect(res.status).toBe(200);
+    expect(todoService.getTodos).toHaveBeenCalledWith(1, {
+      status: 'in_progress',
+      categoryId: undefined,
+      uncategorized: false,
+      overdue: true,
+    });
+  });
+
+  test('status=done과 overdue를 함께 사용하면 400을 반환한다', async () => {
+    todoService.getTodos.mockRejectedValueOnce(new ValidationError('완료 상태와 기한 초과 필터는 함께 사용할 수 없습니다.'));
     const res = await request(app)
       .get('/api/todos?status=done&overdue=true')
       .set('Authorization', `Bearer ${makeToken()}`);

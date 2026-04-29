@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "TodoList"
+  },
+  "nav": {
+    "todos": "任务",
+    "profile": "个人资料",
+    "logout": "退出登录",
+    "manageCategories": "管理分类"
+  },
+  "auth": {
+    "login": "登录",
+    "signup": "注册",
+    "email": "邮箱",
+    "password": "密码",
+    "emailPlaceholder": "邮箱地址",
+    "passwordPlaceholder": "密码",
+    "loginButton": "登录",
+    "signupButton": "注册",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已经有账号？",
+    "loginLink": "登录",
+    "signupLink": "注册",
+    "logoutSuccess": "已退出登录。",
+    "loginRequired": "需要登录。",
+    "emailRequired": "请输入邮箱。",
+    "emailInvalid": "请输入有效的邮箱地址。",
+    "passwordRequired": "请输入密码。",
+    "passwordMinLength": "密码至少需要 {{count}} 个字符。"
+  },
+  "todo": {
+    "title": "任务",
+    "add": "添加任务",
+    "create": "添加新任务",
+    "edit": "编辑任务",
+    "delete": "删除任务",
+    "deleteConfirm": "要删除这个任务吗？",
+    "deleteMessage": "删除的任务会从列表中移除。",
+    "titleField": "标题",
+    "titlePlaceholder": "任务标题",
+    "description": "说明",
+    "descriptionPlaceholder": "详细说明",
+    "dueDate": "截止日期",
+    "category": "分类",
+    "selectCategory": "选择分类",
+    "noCategory": "未指定",
+    "status": "状态",
+    "inProgress": "进行中",
+    "done": "已完成",
+    "complete": "标记为完成",
+    "reopen": "改为进行中",
+    "createdAt": "创建日期",
+    "completedAt": "完成日期",
+    "overdue": "已逾期",
+    "empty": "还没有任务。",
+    "emptyHint": "点击上方的添加任务按钮开始。",
+    "noResults": "没有符合条件的任务。",
+    "resetFilter": "重置筛选",
+    "save": "保存",
+    "cancel": "取消",
+    "titleRequired": "请输入标题。",
+    "titleMaxLength": "标题不能超过 100 个字符。",
+    "uncategorized": "未分类"
+  },
+  "category": {
+    "title": "管理分类",
+    "add": "添加",
+    "edit": "编辑",
+    "delete": "删除",
+    "deleteConfirm": "要删除这个分类吗？",
+    "deleteMessage": "关联的任务不会被删除，会转为未分类。",
+    "name": "分类名称",
+    "namePlaceholder": "新分类名称",
+    "nameRequired": "请输入分类名称。",
+    "nameMaxLength": "名称不能超过 20 个字符。",
+    "empty": "还没有分类。",
+    "save": "保存",
+    "cancel": "取消",
+    "count": "分类 {{count}} / 20",
+    "limitReached": "已达到 20 个分类上限。",
+    "duplicateName": "分类名称已存在。"
+  },
+  "filter": {
+    "all": "全部",
+    "inProgress": "进行中",
+    "done": "已完成",
+    "overdue": "已逾期",
+    "uncategorized": "未分类"
+  },
+  "view": {
+    "list": "列表",
+    "calendar": "日历"
+  },
+  "calendar": {
+    "prev": "上月",
+    "today": "今天",
+    "next": "下月",
+    "noDueDate": "无日期任务",
+    "year": "年份",
+    "month": "月份"
+  },
+  "summary": {
+    "title": "摘要",
+    "total": "全部",
+    "noDate": "无日期",
+    "doneRate": "完成率"
+  },
+  "profile": {
+    "title": "个人资料",
+    "accountInfo": "账号信息",
+    "email": "邮箱",
+    "joinedAt": "注册日期",
+    "logout": "退出登录",
+    "back": "返回"
+  },
+  "error": {
+    "loadFailed": "加载失败。",
+    "saveFailed": "保存失败。",
+    "deleteFailed": "删除失败。",
+    "retry": "重试",
+    "close": "关闭",
+    "unauthorized": "需要认证令牌。",
+    "forbidden": "没有权限。",
+    "notFound": "找不到资源。",
+    "serverError": "服务器发生错误。",
+    "unknown": "发生未知错误。",
+    "invalidCredentials": "邮箱或密码不正确。",
+    "duplicateEmail": "该邮箱已被使用。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "processing": "处理中...",
+    "deleting": "删除中...",
+    "submit": "提交",
+    "confirm": "确认",
+    "cancel": "取消",
+    "close": "关闭",
+    "yes": "是",
+    "no": "否"
+  },
+  "language": {
+    "select": "语言",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

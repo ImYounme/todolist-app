@@ -6,7 +6,7 @@ const todoRepository = require('../repositories/todo.repository');
 const categoryRepository = require('../repositories/category.repository');
 
 function formatTodo(row) {
-  const dueDateStr = row.due_date ? String(row.due_date).split('T')[0] : null;
+  const dueDateStr = formatDateOnly(row.due_date);
   const todayStr = new Date().toISOString().split('T')[0];
   const isOverdue = row.status === 'in_progress' && dueDateStr !== null && dueDateStr < todayStr;
 
@@ -23,6 +23,17 @@ function formatTodo(row) {
     createdAt: row.created_at,
     completedAt: row.completed_at ?? null,
   };
+}
+
+function formatDateOnly(value) {
+  if (!value) return null;
+  if (value instanceof Date) {
+    const year = value.getFullYear();
+    const month = String(value.getMonth() + 1).padStart(2, '0');
+    const day = String(value.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+  return String(value).split('T')[0];
 }
 
 function validateTitle(title) {
@@ -66,14 +77,14 @@ async function getTodo(userId, todoId) {
 }
 
 function validateFilters({ status, categoryId, uncategorized, overdue }) {
-  if (status && overdue) {
-    throw new ValidationError('status와 overdue는 함께 사용할 수 없습니다.');
+  if (status && status !== 'in_progress' && status !== 'done') {
+    throw new ValidationError('상태는 in_progress 또는 done이어야 합니다.');
+  }
+  if (status === 'done' && overdue) {
+    throw new ValidationError('완료 상태와 기한 초과 필터는 함께 사용할 수 없습니다.');
   }
   if (categoryId && uncategorized) {
     throw new ValidationError('categoryId와 uncategorized는 함께 사용할 수 없습니다.');
-  }
-  if (status && status !== 'in_progress' && status !== 'done') {
-    throw new ValidationError('상태는 in_progress 또는 done이어야 합니다.');
   }
 }
 

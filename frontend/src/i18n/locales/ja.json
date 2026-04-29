@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "TodoList"
+  },
+  "nav": {
+    "todos": "タスク",
+    "profile": "プロフィール",
+    "logout": "ログアウト",
+    "manageCategories": "カテゴリ管理"
+  },
+  "auth": {
+    "login": "ログイン",
+    "signup": "新規登録",
+    "email": "メール",
+    "password": "パスワード",
+    "emailPlaceholder": "メールアドレス",
+    "passwordPlaceholder": "パスワード",
+    "loginButton": "ログイン",
+    "signupButton": "新規登録",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "loginLink": "ログイン",
+    "signupLink": "新規登録",
+    "logoutSuccess": "ログアウトしました。",
+    "loginRequired": "ログインが必要です。",
+    "emailRequired": "メールアドレスを入力してください。",
+    "emailInvalid": "有効なメールアドレスを入力してください。",
+    "passwordRequired": "パスワードを入力してください。",
+    "passwordMinLength": "パスワードは{{count}}文字以上で入力してください。"
+  },
+  "todo": {
+    "title": "タスク",
+    "add": "タスク追加",
+    "create": "新しいタスクを追加",
+    "edit": "タスク編集",
+    "delete": "タスク削除",
+    "deleteConfirm": "このタスクを削除しますか？",
+    "deleteMessage": "削除したタスクは一覧から削除されます。",
+    "titleField": "タイトル",
+    "titlePlaceholder": "タスクタイトル",
+    "description": "説明",
+    "descriptionPlaceholder": "詳細説明",
+    "dueDate": "期限",
+    "category": "カテゴリ",
+    "selectCategory": "カテゴリ選択",
+    "noCategory": "未指定",
+    "status": "状態",
+    "inProgress": "進行中",
+    "done": "完了",
+    "complete": "完了にする",
+    "reopen": "進行中に戻す",
+    "createdAt": "作成日",
+    "completedAt": "完了日",
+    "overdue": "期限切れ",
+    "empty": "まだタスクがありません。",
+    "emptyHint": "上のタスク追加ボタンから始めましょう。",
+    "noResults": "条件に一致するタスクがありません。",
+    "resetFilter": "フィルタをリセット",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "titleRequired": "タイトルを入力してください。",
+    "titleMaxLength": "タイトルは100文字以内で入力してください。",
+    "uncategorized": "未分類"
+  },
+  "category": {
+    "title": "カテゴリ管理",
+    "add": "追加",
+    "edit": "編集",
+    "delete": "削除",
+    "deleteConfirm": "カテゴリを削除しますか？",
+    "deleteMessage": "関連するタスクは削除されず未分類になります。",
+    "name": "カテゴリ名",
+    "namePlaceholder": "新しいカテゴリ名",
+    "nameRequired": "カテゴリ名を入力してください。",
+    "nameMaxLength": "名前は20文字以内で入力してください。",
+    "empty": "まだカテゴリがありません。",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "count": "カテゴリ {{count}} / 20",
+    "limitReached": "カテゴリの上限20件に達しました。",
+    "duplicateName": "同じカテゴリ名がすでに存在します。"
+  },
+  "filter": {
+    "all": "すべて",
+    "inProgress": "進行中",
+    "done": "完了",
+    "overdue": "期限切れ",
+    "uncategorized": "未分類"
+  },
+  "view": {
+    "list": "一覧",
+    "calendar": "カレンダー"
+  },
+  "calendar": {
+    "prev": "前へ",
+    "today": "今日",
+    "next": "次へ",
+    "noDueDate": "日付なしのタスク",
+    "year": "年",
+    "month": "月"
+  },
+  "summary": {
+    "title": "概要",
+    "total": "すべて",
+    "noDate": "日付なし",
+    "doneRate": "完了率"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "accountInfo": "アカウント情報",
+    "email": "メール",
+    "joinedAt": "登録日",
+    "logout": "ログアウト",
+    "back": "戻る"
+  },
+  "error": {
+    "loadFailed": "読み込みに失敗しました。",
+    "saveFailed": "保存に失敗しました。",
+    "deleteFailed": "削除に失敗しました。",
+    "retry": "再試行",
+    "close": "閉じる",
+    "unauthorized": "認証トークンが必要です。",
+    "forbidden": "権限がありません。",
+    "notFound": "リソースが見つかりません。",
+    "serverError": "サーバーエラーが発生しました。",
+    "unknown": "不明なエラーが発生しました。",
+    "invalidCredentials": "メールまたはパスワードが正しくありません。",
+    "duplicateEmail": "このメールはすでに使用されています。"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "processing": "処理中...",
+    "deleting": "削除中...",
+    "submit": "送信",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "yes": "はい",
+    "no": "いいえ"
+  },
+  "language": {
+    "select": "言語",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

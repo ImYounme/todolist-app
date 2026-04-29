@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "TodoList"
+  },
+  "nav": {
+    "todos": "할일",
+    "profile": "프로필",
+    "logout": "로그아웃",
+    "manageCategories": "카테고리 관리"
+  },
+  "auth": {
+    "login": "로그인",
+    "signup": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "emailPlaceholder": "이메일 주소",
+    "passwordPlaceholder": "비밀번호",
+    "loginButton": "로그인",
+    "signupButton": "회원가입",
+    "noAccount": "계정이 없나요?",
+    "hasAccount": "이미 계정이 있나요?",
+    "loginLink": "로그인",
+    "signupLink": "회원가입",
+    "logoutSuccess": "로그아웃되었습니다.",
+    "loginRequired": "로그인이 필요합니다.",
+    "emailRequired": "이메일을 입력해주세요.",
+    "emailInvalid": "유효하지 않은 이메일 형식입니다.",
+    "passwordRequired": "비밀번호를 입력해주세요.",
+    "passwordMinLength": "비밀번호는 최소 {{count}}자 이상이어야 합니다."
+  },
+  "todo": {
+    "title": "할일",
+    "add": "할일 추가",
+    "create": "새 할일 추가",
+    "edit": "할일 수정",
+    "delete": "할일 삭제",
+    "deleteConfirm": "할일을 삭제할까요?",
+    "deleteMessage": "삭제한 할일은 목록에서 제거됩니다.",
+    "titleField": "제목",
+    "titlePlaceholder": "할일 제목",
+    "description": "설명",
+    "descriptionPlaceholder": "상세 설명",
+    "dueDate": "종료일",
+    "category": "카테고리",
+    "selectCategory": "카테고리 선택",
+    "noCategory": "미지정",
+    "status": "상태",
+    "inProgress": "진행 중",
+    "done": "완료",
+    "complete": "완료로 변경",
+    "reopen": "진행 중으로 변경",
+    "createdAt": "생성일",
+    "completedAt": "완료일",
+    "overdue": "기한 초과",
+    "empty": "아직 등록된 할일이 없습니다.",
+    "emptyHint": "위의 할일 추가 버튼을 눌러 시작하세요.",
+    "noResults": "조건에 맞는 할일이 없습니다.",
+    "resetFilter": "필터 초기화",
+    "save": "저장",
+    "cancel": "취소",
+    "titleRequired": "제목을 입력해주세요.",
+    "titleMaxLength": "제목은 100자 이하로 입력해주세요.",
+    "uncategorized": "미분류"
+  },
+  "category": {
+    "title": "카테고리 관리",
+    "add": "추가",
+    "edit": "수정",
+    "delete": "삭제",
+    "deleteConfirm": "카테고리를 삭제할까요?",
+    "deleteMessage": "소속 Todo는 삭제되지 않고 미분류로 전환됩니다.",
+    "name": "카테고리 이름",
+    "namePlaceholder": "새 카테고리 이름",
+    "nameRequired": "카테고리 이름을 입력해주세요.",
+    "nameMaxLength": "이름은 20자 이하로 입력해주세요.",
+    "empty": "아직 카테고리가 없습니다.",
+    "save": "저장",
+    "cancel": "취소",
+    "count": "카테고리 {{count}} / 20",
+    "limitReached": "카테고리 20개 한도에 도달했습니다.",
+    "duplicateName": "이미 존재하는 카테고리 이름입니다."
+  },
+  "filter": {
+    "all": "전체",
+    "inProgress": "진행 중",
+    "done": "완료",
+    "overdue": "기한 초과",
+    "uncategorized": "미분류"
+  },
+  "view": {
+    "list": "목록",
+    "calendar": "캘린더"
+  },
+  "calendar": {
+    "prev": "이전",
+    "today": "오늘",
+    "next": "다음",
+    "noDueDate": "날짜 없는 할일",
+    "year": "연도",
+    "month": "월"
+  },
+  "summary": {
+    "title": "요약",
+    "total": "전체",
+    "noDate": "날짜 없음",
+    "doneRate": "완료율"
+  },
+  "profile": {
+    "title": "프로필",
+    "accountInfo": "계정 정보",
+    "email": "이메일",
+    "joinedAt": "가입일",
+    "logout": "로그아웃",
+    "back": "돌아가기"
+  },
+  "error": {
+    "loadFailed": "목록을 불러오지 못했습니다.",
+    "saveFailed": "저장하지 못했습니다.",
+    "deleteFailed": "삭제하지 못했습니다.",
+    "retry": "다시 시도",
+    "close": "닫기",
+    "unauthorized": "인증 토큰이 필요합니다.",
+    "forbidden": "권한이 없습니다.",
+    "notFound": "리소스를 찾을 수 없습니다.",
+    "serverError": "서버 오류가 발생했습니다.",
+    "unknown": "알 수 없는 오류가 발생했습니다.",
+    "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
+    "duplicateEmail": "이미 사용 중인 이메일입니다."
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "processing": "처리 중...",
+    "deleting": "삭제 중...",
+    "submit": "제출",
+    "confirm": "확인",
+    "cancel": "취소",
+    "close": "닫기",
+    "yes": "예",
+    "no": "아니오"
+  },
+  "language": {
+    "select": "언어",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

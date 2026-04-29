@@ -302,7 +302,13 @@ describe('getTodos with filters', () => {
     expect(todoRepository.findTodosByUserId).toHaveBeenCalledWith(1, { overdue: true });
   });
 
-  test('status와 overdue 함께 사용하면 ValidationError', async () => {
+  test('status가 in_progress이면 overdue와 함께 사용할 수 있다', async () => {
+    todoRepository.findTodosByUserId.mockResolvedValueOnce([makeRow({ due_date: '2020-01-01', status: 'in_progress' })]);
+    await getTodos(1, { status: 'in_progress', overdue: true });
+    expect(todoRepository.findTodosByUserId).toHaveBeenCalledWith(1, { status: 'in_progress', overdue: true });
+  });
+
+  test('status가 done이면 overdue와 함께 사용할 수 없다', async () => {
     await expect(getTodos(1, { status: 'done', overdue: true })).rejects.toThrow(ValidationError);
   });
 
