@@ -10,7 +10,7 @@ export function TodoItem({ todo, onSelect }) {
     <button
       type="button"
       onClick={() => onSelect?.(todo)}
-      className="w-full text-left bg-white rounded-xl border border-border-gray p-4 hover:border-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+      className="w-full text-left bg-white dark:bg-gray-800 rounded-xl border border-slate-200 dark:border-gray-700 p-4 shadow-md shadow-slate-200/60 dark:shadow-black/20 hover:border-primary dark:hover:border-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-950"
     >
       <div className="flex items-start gap-3">
         <span
@@ -24,26 +24,26 @@ export function TodoItem({ todo, onSelect }) {
         <div className="flex-1 min-w-0">
           <p
             className={`text-sm font-medium ${
-              isDone ? 'line-through text-text-secondary' : 'text-text-primary'
+              isDone ? 'line-through text-text-secondary dark:text-gray-400' : 'text-text-primary dark:text-white'
             }`}
           >
             {title}
           </p>
           {description && (
-            <p className="mt-0.5 text-xs text-text-secondary truncate">{description}</p>
+            <p className="mt-0.5 text-xs text-text-secondary dark:text-gray-300 truncate">{description}</p>
           )}
           <div className="mt-2 flex flex-wrap gap-1.5 items-center">
             <span className="text-xs px-2 py-0.5 rounded-full bg-primary-light text-primary">
               {category ? category.name : t('todo.noCategory')}
             </span>
             {dueDate && (
-              <span className="text-xs text-text-secondary">{dueDate}</span>
+              <span className="text-xs text-text-secondary dark:text-gray-300">{dueDate}</span>
             )}
             <span
               className={`text-xs px-2 py-0.5 rounded-full ${
                 isDone
-                  ? 'bg-bg-gray text-text-secondary'
-                  : 'bg-bg-gray text-text-primary'
+                  ? 'bg-slate-100 dark:bg-gray-700 text-text-secondary dark:text-gray-300'
+                  : 'bg-slate-100 dark:bg-gray-700 text-text-primary dark:text-white'
               }`}
             >
               {isDone ? t('todo.done') : t('todo.inProgress')}

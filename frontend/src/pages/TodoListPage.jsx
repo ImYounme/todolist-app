@@ -61,8 +61,8 @@ export default function TodoListPage() {
   }
 
   return (
-    <div className="min-h-screen bg-bg-gray dark:bg-gray-900">
-      <header className="bg-white dark:bg-gray-800 border-b border-border-gray dark:border-gray-700 px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+    <div className="min-h-screen bg-slate-100 dark:bg-gray-950">
+      <header className="bg-white dark:bg-gray-800 border-b border-slate-200 dark:border-gray-700 shadow-sm px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
         <Link
           to="/"
           className="text-lg sm:text-xl font-semibold text-text-primary dark:text-white hover:text-primary transition-colors"
@@ -81,17 +81,17 @@ export default function TodoListPage() {
         </div>
       </header>
 
-      <main className={`${viewMode === 'calendar' ? 'max-w-6xl' : 'max-w-5xl'} mx-auto px-4 py-6`}>
+      <main className="max-w-6xl mx-auto px-4 py-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
           <div className="flex gap-2">
             <Button size="sm" onClick={() => setIsCreateModalOpen(true)}>
               + {t('todo.add')}
             </Button>
-            <Button variant="secondary" size="sm" onClick={() => setIsManageModalOpen(true)}>
+            <Button size="sm" onClick={() => setIsManageModalOpen(true)}>
               {t('nav.manageCategories')}
             </Button>
           </div>
-          <div className="inline-flex w-fit items-center gap-1 bg-white dark:bg-gray-800 border border-border-gray dark:border-gray-700 rounded-full p-1 shadow-sm">
+          <div className="inline-flex w-fit items-center gap-1 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-full p-1 shadow-md shadow-slate-200/60 dark:shadow-black/20">
             <button
               type="button"
               onClick={() => setViewMode('list')}
@@ -119,7 +119,7 @@ export default function TodoListPage() {
 
         <div className="space-y-3 mb-6">
           <CategoryFilterBar categories={categories} />
-          <div className="inline-flex max-w-full items-center gap-1 bg-white dark:bg-gray-800 border border-border-gray dark:border-gray-700 rounded-full p-1 shadow-sm overflow-x-auto">
+          <div className="inline-flex max-w-full items-center gap-1 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-full p-1 shadow-md shadow-slate-200/60 dark:shadow-black/20 overflow-x-auto">
             <TodoStatusTabs />
             <OverdueFilter />
           </div>
@@ -136,13 +136,19 @@ export default function TodoListPage() {
                 isError={isError}
                 onRetry={refetch}
                 onSelectTodo={handleSelectTodo}
+                onAddTodo={() => setIsCreateModalOpen(true)}
                 showEmptyFilterMessage={
                   selectedCategoryId || selectedStatusTab !== 'all' || showUncategorized || showOverdue
                 }
               />
             )}
           </div>
-          {!isLoading && !isError && <TodoSummaryPanel todos={todos} />}
+          {!isLoading && !isError && (
+            <TodoSummaryPanel
+              todos={todos}
+              onAddTodo={() => setIsCreateModalOpen(true)}
+            />
+          )}
         </div>
       </main>
 

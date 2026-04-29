@@ -145,8 +145,8 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
 
   return (
     <div className="space-y-4">
-      <section className="bg-white dark:bg-gray-800 border border-border-gray dark:border-gray-700 rounded-lg shadow-sm overflow-hidden">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 py-3 border-b border-border-gray dark:border-gray-700">
+      <section className="bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl shadow-slate-200/70 dark:shadow-black/30 overflow-hidden">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 py-3 border-b border-slate-200 dark:border-gray-700">
           <div className="relative">
             <button
               type="button"
@@ -230,7 +230,7 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-7 border-b border-border-gray dark:border-gray-700 bg-bg-gray dark:bg-gray-900">
+        <div className="grid grid-cols-7 border-b border-slate-200 dark:border-gray-700 bg-slate-100 dark:bg-gray-900">
           {weekdayLabels.map((label) => (
             <div key={label} className="px-2 py-2 text-center text-xs font-medium text-text-secondary dark:text-gray-300">
               {label}
@@ -244,8 +244,8 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
             return (
               <div
                 key={day.key}
-                className={`min-h-24 sm:min-h-32 border-r border-b border-border-gray dark:border-gray-700 p-1.5 ${
-                  day.isCurrentMonth ? 'bg-white dark:bg-gray-800' : 'bg-bg-gray dark:bg-gray-900'
+                className={`min-h-24 sm:min-h-32 border-r border-b border-slate-200 dark:border-gray-700 p-1.5 ${
+                  day.isCurrentMonth ? 'bg-white dark:bg-gray-800' : 'bg-slate-100 dark:bg-gray-900'
                 }`}
               >
                 <div
@@ -272,7 +272,7 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
                           todo.isOverdue
                             ? 'bg-red-50 dark:bg-red-950/40 text-overdue'
                             : isDone
-                              ? 'bg-bg-gray dark:bg-gray-700 text-text-secondary dark:text-gray-300 line-through'
+                              ? 'bg-slate-100 dark:bg-gray-700 text-text-secondary dark:text-gray-300 line-through'
                               : 'bg-primary-light dark:bg-blue-950/40 text-primary dark:text-blue-200'
                         }`}
                       >
@@ -293,7 +293,7 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
       </section>
 
       {undatedTodos.length > 0 && (
-        <section className="bg-white dark:bg-gray-800 border border-border-gray dark:border-gray-700 rounded-lg shadow-sm p-4">
+        <section className="bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl shadow-slate-200/70 dark:shadow-black/30 p-4">
           <h3 className="text-sm font-semibold text-text-primary dark:text-white mb-3">
             {t('calendar.noDueDate')}
           </h3>
@@ -307,7 +307,7 @@ export function TodoCalendar({ todos = [], onSelectTodo }) {
                   onClick={() => onSelectTodo?.(todo)}
                   className={`w-full rounded-md border px-3 py-2 text-left text-sm transition-colors ${
                     isDone
-                      ? 'border-border-gray dark:border-gray-700 bg-bg-gray dark:bg-gray-700 text-text-secondary dark:text-gray-300 line-through'
+                      ? 'border-slate-200 dark:border-gray-700 bg-slate-100 dark:bg-gray-700 text-text-secondary dark:text-gray-300 line-through'
                       : 'border-border-gray dark:border-gray-700 bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:border-primary'
                   }`}
                 >

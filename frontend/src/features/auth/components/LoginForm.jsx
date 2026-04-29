@@ -46,10 +46,10 @@ export function LoginForm({ onSubmit, isLoading, serverError }) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="user@example.com"
+          placeholder={t('auth.emailPlaceholder')}
           autoComplete="email"
           disabled={isLoading}
-          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary disabled:opacity-50"
+          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary dark:text-gray-100 bg-white dark:bg-gray-900 placeholder-text-muted dark:placeholder-gray-500 focus:outline-none focus:border-primary disabled:opacity-50"
         />
         {fieldErrors.email && (
           <p role="alert" className="mt-1 text-xs text-overdue">
@@ -67,9 +67,10 @@ export function LoginForm({ onSubmit, isLoading, serverError }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder={t('auth.passwordPlaceholder')}
           autoComplete="current-password"
           disabled={isLoading}
-          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary focus:outline-none focus:border-primary disabled:opacity-50"
+          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary dark:text-gray-100 bg-white dark:bg-gray-900 placeholder-text-muted dark:placeholder-gray-500 focus:outline-none focus:border-primary disabled:opacity-50"
         />
         {fieldErrors.password && (
           <p role="alert" className="mt-1 text-xs text-overdue">

@@ -7,8 +7,8 @@ import { ROUTES } from '../constants/routes';
 
 function ProfileShell({ title, backLabel, onBack, children }) {
   return (
-    <div className="min-h-screen bg-bg-gray dark:bg-gray-900">
-      <header className="bg-white dark:bg-gray-800 border-b border-border-gray dark:border-gray-700 px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-slate-100 dark:bg-gray-950">
+      <header className="bg-white dark:bg-gray-800 border-b border-slate-200 dark:border-gray-700 shadow-sm px-6 py-4 flex items-center justify-between">
         <h1 className="text-xl font-semibold text-text-primary dark:text-white">{title}</h1>
         <Button variant="secondary" size="sm" onClick={onBack}>
           {backLabel}
@@ -70,7 +70,7 @@ export default function UserProfilePage() {
 
   return (
     <ProfileShell title={t('profile.title')} backLabel={t('profile.back')} onBack={goBack}>
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-border-gray dark:border-gray-700 p-6 shadow-sm">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-slate-200 dark:border-gray-700 p-6 shadow-xl shadow-slate-200/70 dark:shadow-black/30">
         <h2 className="text-base font-semibold text-text-primary dark:text-white mb-4">
           {t('profile.accountInfo')}
         </h2>
