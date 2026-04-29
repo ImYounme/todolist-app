@@ -1036,13 +1036,18 @@
           "isOverdue",
           "createdAt"
         ],
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 1
-          },
-          "title": {
+"properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1
+            },
+            "title": {
             "type": "string",
             "minLength": 1,
             "maxLength": 100,

@@ -11,6 +11,8 @@
 | 버전 | 날짜 | 변경 유형 | 변경 내용 | 작성자 |
 |------|------|-----------|-----------|--------|
 | 1.0.0 | 2026-04-28 | 최초 작성 | ERD 초안 작성 | Database Designer |
+| 1.0.1 | 2026-04-29 | 문서 업데이트 | Backend API 응답 필드(userId) 정합성을 위해 ERD 설명 보강 | - |
+| 1.0.2 | 2026-04-29 | 문서 업데이트 | CHECK 제약 목록에 chk_todo_completed_at 추가 | - |
 
 ---
 
@@ -151,3 +153,4 @@ erDiagram
 | TODO | status | status IN ('in_progress', 'done') | 허용된 상태값만 저장 |
 | CATEGORY | name | length(name) <= 20 | 이름 최대 길이 20자 제한 |
 | TODO | title | length(title) <= 100 | 제목 최대 길이 100자 제한 |
+| TODO | completed_at | (status = 'done' AND completed_at IS NOT NULL) OR (status = 'in_progress' AND completed_at IS NULL) | 완료 상태일 때만 완료 일시를 저장하고 진행 중일 때는 NULL 유지 (`chk_todo_completed_at`) |

@@ -137,189 +137,189 @@
 ### BE-01. 백엔드 앱 기반 구성
 
 완료 조건:
-- [ ] `app.js`와 `server.js` 책임이 분리된다.
-- [ ] Express 5, CORS, JSON parser, 라우터, 에러 미들웨어가 연결된다.
-- [ ] `.env.example`에 필수 환경 변수가 정의된다.
-- [ ] 필수 환경 변수 누락 시 서버가 시작되지 않는다.
+- [x] `app.js`와 `server.js` 책임이 분리된다.
+- [x] Express 5, CORS, JSON parser, 라우터, 에러 미들웨어가 연결된다.
+- [x] `.env.example`에 필수 환경 변수가 정의된다.
+- [x] 필수 환경 변수 누락 시 서버가 시작되지 않는다.
 
 의존성:
-- [ ] 없음
+- [x] 없음
 
 ### BE-02. 공통 오류/응답/상수 구성
 
 완료 조건:
-- [ ] `{ success: false, message, code }` 오류 응답이 통일된다.
-- [ ] `ValidationError`, `UnauthorizedError`, `ForbiddenError`, `NotFoundError`, `ConflictError`가 정의된다.
-- [ ] 검증 상수와 JWT 알고리즘 상수가 분리된다.
-- [ ] Router -> Controller -> Service -> Repository 구조를 준수한다.
+- [x] `{ success: false, message, code }` 오류 응답이 통일된다.
+- [x] `ValidationError`, `UnauthorizedError`, `ForbiddenError`, `NotFoundError`, `ConflictError`가 정의된다.
+- [x] 검증 상수와 JWT 알고리즘 상수가 분리된다.
+- [x] Router -> Controller -> Service -> Repository 구조를 준수한다.
 
 의존성:
-- [ ] BE-01 완료
+- [x] BE-01 완료
 
 ### BE-03. DB 연결 모듈 구성
 
 완료 조건:
-- [ ] `pg.Pool` 연결 모듈이 준비된다.
-- [ ] 환경 변수만 사용한다.
-- [ ] Repository에서 공통 pool을 사용한다.
+- [x] `pg.Pool` 연결 모듈이 준비된다.
+- [x] 환경 변수만 사용한다.
+- [x] Repository에서 공통 pool을 사용한다.
 
 의존성:
-- [ ] BE-01 완료
-- [ ] DB-01 완료
+- [x] BE-01 완료
+- [x] DB-01 완료
 
 ### BE-04. 회원가입 API
 
 완료 조건:
-- [ ] `POST /api/auth/signup`이 구현된다.
-- [ ] 이메일/비밀번호 필수 및 형식 검증이 수행된다.
-- [ ] 중복 이메일 오류가 반환된다.
-- [ ] 비밀번호가 bcrypt 해시로 저장된다.
-- [ ] 응답에 비밀번호 해시가 포함되지 않는다.
+- [x] `POST /api/auth/signup`이 구현된다.
+- [x] 이메일/비밀번호 필수 및 형식 검증이 수행된다.
+- [x] 중복 이메일 오류가 반환된다.
+- [x] 비밀번호가 bcrypt 해시로 저장된다.
+- [x] 응답에 비밀번호 해시가 포함되지 않는다.
 
 의존성:
-- [ ] BE-02 완료
-- [ ] BE-03 완료
-- [ ] DB-04 완료
+- [x] BE-02 완료
+- [x] BE-03 완료
+- [x] DB-04 완료
 
 ### BE-05. 로그인/JWT 발급
 
 완료 조건:
-- [ ] `POST /api/auth/login`이 구현된다.
-- [ ] bcrypt 비밀번호 검증이 수행된다.
-- [ ] HS-512 JWT가 발급된다.
-- [ ] JWT payload에 사용자 식별자가 포함된다.
-- [ ] 인증 실패 시 401이 반환된다.
+- [x] `POST /api/auth/login`이 구현된다.
+- [x] bcrypt 비밀번호 검증이 수행된다.
+- [x] HS-512 JWT가 발급된다.
+- [x] JWT payload에 사용자 식별자가 포함된다.
+- [x] 인증 실패 시 401이 반환된다.
 
 의존성:
-- [ ] BE-04 완료
-- [ ] JWT 만료 정책 결정
+- [x] BE-04 완료
+- [x] JWT 만료 정책 결정
 
 ### BE-06. 인증 미들웨어
 
 완료 조건:
-- [ ] Bearer token이 검증된다.
-- [ ] 토큰 누락/위조/만료 시 401이 반환된다.
-- [ ] 검증 성공 시 `req.user.id`가 설정된다.
-- [ ] Todo/Category/Profile API가 보호된다.
+- [x] Bearer token이 검증된다.
+- [x] 토큰 누락/위조/만료 시 401이 반환된다.
+- [x] 검증 성공 시 `req.user.id`가 설정된다.
+- [x] Todo/Category/Profile API가 보호된다.
 
 의존성:
-- [ ] BE-05 완료
+- [x] BE-05 완료
 
 ### BE-07. 사용자 정보 조회 API
 
 완료 조건:
-- [ ] 인증 사용자의 email, created_at을 조회할 수 있다.
-- [ ] 민감 정보가 응답에서 제외된다.
-- [ ] 미인증 요청은 401을 반환한다.
+- [x] 인증 사용자의 email, created_at을 조회할 수 있다.
+- [x] 민감 정보가 응답에서 제외된다.
+- [x] 미인증 요청은 401을 반환한다.
 
 의존성:
-- [ ] BE-06 완료
+- [x] BE-06 완료
 
 ### BE-08. Category CRUD API
 
 완료 조건:
-- [ ] 본인 Category 목록을 조회할 수 있다.
-- [ ] Category 생성/수정/삭제가 가능하다.
-- [ ] 이름 필수/20자 제한이 적용된다.
-- [ ] 동일 사용자 중복 이름이 거부된다.
-- [ ] 사용자당 20개 제한이 적용된다.
-- [ ] 타 사용자 Category 접근이 차단된다.
+- [x] 본인 Category 목록을 조회할 수 있다.
+- [x] Category 생성/수정/삭제가 가능하다.
+- [x] 이름 필수/20자 제한이 적용된다.
+- [x] 동일 사용자 중복 이름이 거부된다.
+- [x] 사용자당 20개 제한이 적용된다.
+- [x] 타 사용자 Category 접근이 차단된다.
 
 의존성:
-- [ ] BE-06 완료
-- [ ] DB-04 완료
-- [ ] DB-05 완료
+- [x] BE-06 완료
+- [x] DB-04 완료
+- [x] DB-05 완료
 
 ### BE-09. Category 삭제 후 Todo 미분류 처리
 
 완료 조건:
-- [ ] Category 삭제 시 Todo는 삭제되지 않는다.
-- [ ] 연결 Todo의 `category_id`가 NULL 처리된다.
-- [ ] 삭제된 Category가 조회/필터에 노출되지 않는다.
+- [x] Category 삭제 시 Todo는 삭제되지 않는다.
+- [x] 연결 Todo의 `category_id`가 NULL 처리된다.
+- [x] 삭제된 Category가 조회/필터에 노출되지 않는다.
 
 의존성:
-- [ ] BE-08 완료
-- [ ] DB `ON DELETE SET NULL` 적용
+- [x] BE-08 완료
+- [x] DB `ON DELETE SET NULL` 적용
 
 ### BE-10. Todo 생성/조회 API
 
 완료 조건:
-- [ ] `POST /api/todos`가 구현된다.
-- [ ] 제목 필수/100자 제한이 적용된다.
-- [ ] 설명, 종료일, 카테고리 선택값이 처리된다.
-- [ ] Category 소유권이 검증된다.
-- [ ] 생성 시 `in_progress`, `completed_at = NULL`이 설정된다.
-- [ ] `GET /api/todos`는 본인 Todo만 반환한다.
+- [x] `POST /api/todos`가 구현된다.
+- [x] 제목 필수/100자 제한이 적용된다.
+- [x] 설명, 종료일, 카테고리 선택값이 처리된다.
+- [x] Category 소유권이 검증된다.
+- [x] 생성 시 `in_progress`, `completed_at = NULL`이 설정된다.
+- [x] `GET /api/todos`는 본인 Todo만 반환한다.
 
 의존성:
-- [ ] BE-06 완료
-- [ ] BE-08 완료
+- [x] BE-06 완료
+- [x] BE-08 완료
 
 ### BE-11. Todo 수정/삭제 API
 
 완료 조건:
-- [ ] 제목/설명/종료일/카테고리를 수정할 수 있다.
-- [ ] Todo 소유권이 검증된다.
-- [ ] 타 사용자 Todo 접근이 차단된다.
-- [ ] Todo 삭제가 구현된다.
-- [ ] 생성과 동일한 검증 규칙이 적용된다.
+- [x] 제목/설명/종료일/카테고리를 수정할 수 있다.
+- [x] Todo 소유권이 검증된다.
+- [x] 타 사용자 Todo 접근이 차단된다.
+- [x] Todo 삭제가 구현된다.
+- [x] 생성과 동일한 검증 규칙이 적용된다.
 
 의존성:
-- [ ] BE-10 완료
-- [ ] Todo 삭제 방식 결정
+- [x] BE-10 완료
+- [x] Todo 삭제 방식 결정
 
 ### BE-12. Todo 상태 전환 API
 
 완료 조건:
-- [ ] `in_progress`와 `done` 간 상태 전환이 가능하다.
-- [ ] 완료 시 `completed_at`이 기록된다.
-- [ ] 진행 중 복귀 시 `completed_at`이 초기화된다.
-- [ ] 상태 변경 대상 소유권이 검증된다.
-- [ ] 완료 Todo는 overdue에서 제외된다.
+- [x] `in_progress`와 `done` 간 상태 전환이 가능하다.
+- [x] 완료 시 `completed_at`이 기록된다.
+- [x] 진행 중 복귀 시 `completed_at`이 초기화된다.
+- [x] 상태 변경 대상 소유권이 검증된다.
+- [x] 완료 Todo는 overdue에서 제외된다.
 
 의존성:
-- [ ] BE-10 완료
-- [ ] DB-08 완료
+- [x] BE-10 완료
+- [x] DB-08 완료
 
 ### BE-13. Todo 필터/기한 초과 조회
 
 완료 조건:
-- [ ] category 필터가 지원된다.
-- [ ] status 필터가 지원된다.
-- [ ] overdue 필터가 지원된다.
-- [ ] overdue 조건은 `due_date < 서버 기준 오늘` 및 `status = in_progress`이다.
-- [ ] 모든 결과는 본인 데이터만 포함한다.
-- [ ] 기본 정렬이 일관되게 적용된다.
+- [x] category 필터가 지원된다.
+- [x] status 필터가 지원된다.
+- [x] overdue 필터가 지원된다.
+- [x] overdue 조건은 `due_date < 서버 기준 오늘` 및 `status = in_progress`이다.
+- [x] 모든 결과는 본인 데이터만 포함한다.
+- [x] 기본 정렬이 일관되게 적용된다.
 
 의존성:
-- [ ] BE-10 완료
-- [ ] 기본 정렬/타임존 정책 결정
+- [x] BE-10 완료
+- [x] 기본 정렬/타임존 정책 결정
 
 ### BE-14. 보안/검증 보강
 
 완료 조건:
-- [ ] 모든 SQL이 parameterized query를 사용한다.
-- [ ] 서버 측 소유권 검증 누락이 없다.
-- [ ] 비밀값 하드코딩이 없다.
-- [ ] 400/401/403/404/409 오류 정책이 일관된다.
-- [ ] HTTPS는 배포 체크리스트에 포함된다.
+- [x] 모든 SQL이 parameterized query를 사용한다.
+- [x] 서버 측 소유권 검증 누락이 없다.
+- [x] 비밀값 하드코딩이 없다.
+- [x] 400/401/403/404/409 오류 정책이 일관된다.
+- [x] HTTPS는 배포 체크리스트에 포함된다.
 
 의존성:
-- [ ] BE-04~BE-13 완료
+- [x] BE-04~BE-13 완료
 
 ### BE-15. 백엔드 테스트
 
 완료 조건:
-- [ ] 회원가입/중복 이메일/로그인 테스트가 있다.
-- [ ] 미인증 접근 401 테스트가 있다.
-- [ ] 타 사용자 리소스 접근 차단 테스트가 있다.
-- [ ] Todo 제목 100자 초과 테스트가 있다.
-- [ ] Category 20개 제한 테스트가 있다.
-- [ ] Category 삭제 시 Todo 미분류 테스트가 있다.
-- [ ] 완료 Todo overdue 제외 테스트가 있다.
+- [x] 회원가입/중복 이메일/로그인 테스트가 있다.
+- [x] 미인증 접근 401 테스트가 있다.
+- [x] 타 사용자 리소스 접근 차단 테스트가 있다.
+- [x] Todo 제목 100자 초과 테스트가 있다.
+- [x] Category 20개 제한 테스트가 있다.
+- [x] Category 삭제 시 Todo 미분류 테스트가 있다.
+- [x] 완료 Todo overdue 제외 테스트가 있다.
 
 의존성:
-- [ ] BE-04~BE-13 완료
+- [x] BE-04~BE-13 완료
 
 ---
 
@@ -416,7 +416,7 @@
 
 의존성:
 - [ ] FE-05 완료
-- [ ] BE-11 완료
+- [x] BE-11 완료
 
 ### FE-08. Todo 상태 변경/overdue 표시
 

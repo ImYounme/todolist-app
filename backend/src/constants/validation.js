@@ -1,0 +1,9 @@
+'use strict';
+
+const VALIDATION = {
+  MAX_TODO_TITLE_LENGTH: 100,
+  MAX_CATEGORY_NAME_LENGTH: 20,
+  MAX_CATEGORY_COUNT: 20,
+};
+
+module.exports = { VALIDATION };
