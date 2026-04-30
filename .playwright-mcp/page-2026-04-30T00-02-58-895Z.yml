@@ -1,0 +1,19 @@
+- generic [ref=e33]:
+  - generic [ref=e34]:
+    - link "TodoList" [ref=e35] [cursor=pointer]:
+      - /url: /
+    - paragraph [ref=e36]: 로그인
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: 이메일
+      - textbox "이메일" [ref=e40]:
+        - /placeholder: 가입한 이메일 주소를 입력하세요
+    - generic [ref=e41]:
+      - generic [ref=e42]: 비밀번호
+      - textbox "비밀번호" [ref=e43]:
+        - /placeholder: 비밀번호를 입력하세요
+    - button "로그인" [ref=e44] [cursor=pointer]
+    - paragraph [ref=e45]:
+      - text: 계정이 없나요?
+      - link "회원가입" [ref=e46] [cursor=pointer]:
+        - /url: /signup

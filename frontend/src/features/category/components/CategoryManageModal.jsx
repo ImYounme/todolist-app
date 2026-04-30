@@ -102,6 +102,11 @@ export function CategoryManageModal({ isOpen, onClose }) {
         <p className="text-xs text-text-muted mb-3">
           카테고리 {categories.length} / 20
         </p>
+        {isAtLimit && (
+          <p className="text-xs text-overdue mb-3">
+            카테고리는 최대 20개까지 생성할 수 있습니다.
+          </p>
+        )}
 
         <form onSubmit={handleCreate} className="mb-4">
           <div className="flex gap-2">

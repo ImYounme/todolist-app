@@ -1,0 +1,35 @@
+- generic [ref=e18]:
+  - banner [ref=e19]:
+    - link "TodoList" [ref=e20] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e21]:
+      - combobox "언어" [ref=e22]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+      - button "프로필" [ref=e26] [cursor=pointer]
+      - button "로그아웃" [ref=e27] [cursor=pointer]
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - button "+ 할일 추가" [ref=e31] [cursor=pointer]
+        - button "카테고리 관리" [ref=e32] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "목록" [ref=e34] [cursor=pointer]
+        - button "캘린더" [ref=e35] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - button "전체" [ref=e38] [cursor=pointer]
+        - button "미분류" [ref=e39] [cursor=pointer]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - button "전체" [ref=e42] [cursor=pointer]
+          - button "진행 중" [ref=e43] [cursor=pointer]
+          - button "완료" [ref=e44] [cursor=pointer]
+        - button "기한 초과" [ref=e45] [cursor=pointer]
+    - generic [ref=e48]:
+      - paragraph [ref=e49]: 아직 등록된 할일이 없습니다.
+      - paragraph [ref=e50]: 위의 할일 추가 버튼을 눌러 시작하세요.

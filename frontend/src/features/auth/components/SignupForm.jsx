@@ -41,7 +41,7 @@ export function SignupForm({ onSubmit, isLoading, serverError }) {
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-text-primary mb-1" htmlFor="signup-email">
+        <label className="block text-sm font-medium text-text-primary dark:text-gray-100 mb-1" htmlFor="signup-email">
           {t('auth.email')}
         </label>
         <input
@@ -49,10 +49,10 @@ export function SignupForm({ onSubmit, isLoading, serverError }) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="user@example.com"
+          placeholder={t('auth.emailPlaceholder')}
           autoComplete="email"
           disabled={isLoading}
-          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary disabled:opacity-50"
+          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary dark:text-gray-100 bg-white dark:bg-gray-900 placeholder-text-muted dark:placeholder-gray-500 focus:outline-none focus:border-primary disabled:opacity-50"
         />
         {fieldErrors.email && (
           <p role="alert" className="mt-1 text-xs text-overdue">
@@ -62,7 +62,7 @@ export function SignupForm({ onSubmit, isLoading, serverError }) {
       </div>
 
       <div className="mb-6">
-        <label className="block text-sm font-medium text-text-primary mb-1" htmlFor="signup-password">
+        <label className="block text-sm font-medium text-text-primary dark:text-gray-100 mb-1" htmlFor="signup-password">
           {t('auth.password')}
         </label>
         <input
@@ -70,9 +70,10 @@ export function SignupForm({ onSubmit, isLoading, serverError }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder={t('auth.passwordPlaceholder')}
           autoComplete="new-password"
           disabled={isLoading}
-          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary focus:outline-none focus:border-primary disabled:opacity-50"
+          className="w-full px-3 py-2 border border-border-gray rounded-lg text-sm text-text-primary dark:text-gray-100 bg-white dark:bg-gray-900 placeholder-text-muted dark:placeholder-gray-500 focus:outline-none focus:border-primary disabled:opacity-50"
         />
         {fieldErrors.password && (
           <p role="alert" className="mt-1 text-xs text-overdue">
@@ -95,7 +96,7 @@ export function SignupForm({ onSubmit, isLoading, serverError }) {
         {isLoading ? t('common.processing') : t('auth.signupButton')}
       </button>
 
-      <p className="mt-6 text-center text-sm text-text-secondary">
+      <p className="mt-6 text-center text-sm text-text-secondary dark:text-gray-300">
         {t('auth.hasAccount')}{' '}
         <Link to={ROUTES.LOGIN} className="text-primary hover:underline">
           {t('auth.loginLink')}

@@ -1,0 +1,79 @@
+- generic [ref=e66]:
+  - banner [ref=e67]:
+    - link "TodoList" [ref=e68] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e69]:
+      - combobox "언어" [ref=e70]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+      - button "프로필" [ref=e74] [cursor=pointer]
+      - button "로그아웃" [ref=e75] [cursor=pointer]
+  - main [ref=e76]:
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - button "+ 할일 추가" [ref=e79] [cursor=pointer]
+        - button "카테고리 관리" [ref=e80] [cursor=pointer]
+      - generic [ref=e81]:
+        - button "목록" [ref=e82] [cursor=pointer]
+        - button "캘린더" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "전체" [ref=e86] [cursor=pointer]
+        - button "미분류" [ref=e87] [cursor=pointer]
+        - button "업무" [ref=e115] [cursor=pointer]
+        - button "개인" [ref=e123] [cursor=pointer]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - button "전체" [ref=e90] [cursor=pointer]
+          - button "진행 중" [ref=e91] [cursor=pointer]
+          - button "완료" [ref=e92] [cursor=pointer]
+        - button "기한 초과" [ref=e93] [cursor=pointer]
+    - list [ref=e349]:
+      - listitem [ref=e350]:
+        - button "분기 보고서 제출 미지정 2026-04-27 진행 중 기한 초과" [active] [ref=e351] [cursor=pointer]:
+          - generic [ref=e354]:
+            - paragraph [ref=e355]: 분기 보고서 제출
+            - generic [ref=e356]:
+              - generic [ref=e357]: 미지정
+              - generic [ref=e358]: 2026-04-27
+              - generic [ref=e359]: 진행 중
+              - generic [ref=e360]: 기한 초과
+  - generic [ref=e363]:
+    - generic [ref=e364]:
+      - heading "할일 상세" [level=2] [ref=e365]
+      - button "닫기" [ref=e366] [cursor=pointer]:
+        - img [ref=e367]
+    - generic [ref=e370]:
+      - generic [ref=e371]:
+        - generic [ref=e372]: 상태
+        - generic [ref=e373]: 기한 초과
+      - button "완료로 변경" [ref=e374] [cursor=pointer]
+    - generic [ref=e375]:
+      - generic [ref=e376]:
+        - generic [ref=e377]: 제목 *
+        - textbox "제목 *" [ref=e378]:
+          - /placeholder: 할일 제목을 입력하세요
+          - text: 분기 보고서 제출
+        - generic [ref=e380]: 9 / 100
+      - generic [ref=e381]:
+        - generic [ref=e382]: 설명
+        - textbox "설명" [ref=e383]:
+          - /placeholder: 상세 설명 입력 (선택)
+      - generic [ref=e384]:
+        - generic [ref=e385]: 종료일
+        - textbox "종료일" [ref=e386]: 2026-04-27
+      - generic [ref=e387]:
+        - generic [ref=e388]: 카테고리
+        - combobox "카테고리" [ref=e389]:
+          - option "미지정" [selected]
+          - option "업무"
+          - option "개인"
+      - generic [ref=e390]:
+        - button "취소" [ref=e391] [cursor=pointer]
+        - button "저장" [ref=e392] [cursor=pointer]
+    - button "삭제" [ref=e394] [cursor=pointer]
+    - paragraph [ref=e396]: "생성일: 2026. 4. 30."

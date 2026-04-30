@@ -1,0 +1,83 @@
+- generic [ref=e66]:
+  - banner [ref=e67]:
+    - link "TodoList" [ref=e68] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e69]:
+      - combobox "언어" [ref=e70]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+      - button "프로필" [ref=e74] [cursor=pointer]
+      - button "로그아웃" [ref=e75] [cursor=pointer]
+  - main [ref=e76]:
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - button "+ 할일 추가" [ref=e79] [cursor=pointer]
+        - button "카테고리 관리" [ref=e80] [cursor=pointer]
+      - generic [ref=e81]:
+        - button "목록" [ref=e82] [cursor=pointer]
+        - button "캘린더" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "전체" [ref=e86] [cursor=pointer]
+        - button "미분류" [ref=e87] [cursor=pointer]
+        - button "업무" [ref=e115] [cursor=pointer]
+        - button "개인" [ref=e123] [cursor=pointer]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - button "전체" [ref=e90] [cursor=pointer]
+          - button "진행 중" [ref=e91] [cursor=pointer]
+          - button "완료" [ref=e92] [cursor=pointer]
+        - button "기한 초과" [ref=e93] [cursor=pointer]
+    - list [ref=e156]:
+      - listitem [ref=e193]:
+        - button "헬스장 등록 개인 진행 중" [ref=e194] [cursor=pointer]:
+          - generic [ref=e197]:
+            - paragraph [ref=e198]: 헬스장 등록
+            - generic [ref=e199]:
+              - generic [ref=e200]: 개인
+              - generic [ref=e201]: 진행 중
+      - listitem [ref=e157]:
+        - button "주간 보고서 작성 업무 2026-04-30 진행 중" [active] [ref=e158] [cursor=pointer]:
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: 주간 보고서 작성
+            - generic [ref=e163]:
+              - generic [ref=e164]: 업무
+              - generic [ref=e165]: 2026-04-30
+              - generic [ref=e166]: 진행 중
+  - generic [ref=e231]:
+    - generic [ref=e232]:
+      - heading "할일 상세" [level=2] [ref=e233]
+      - button "닫기" [ref=e234] [cursor=pointer]:
+        - img [ref=e235]
+    - generic [ref=e238]:
+      - generic [ref=e240]: 상태
+      - button "완료로 변경" [ref=e241] [cursor=pointer]
+    - generic [ref=e242]:
+      - generic [ref=e243]:
+        - generic [ref=e244]: 제목 *
+        - textbox "제목 *" [ref=e245]:
+          - /placeholder: 할일 제목을 입력하세요
+          - text: 주간 보고서 작성
+        - generic [ref=e247]: 9 / 100
+      - generic [ref=e248]:
+        - generic [ref=e249]: 설명
+        - textbox "설명" [ref=e250]:
+          - /placeholder: 상세 설명 입력 (선택)
+      - generic [ref=e251]:
+        - generic [ref=e252]: 종료일
+        - textbox "종료일" [ref=e253]: 2026-04-30
+      - generic [ref=e254]:
+        - generic [ref=e255]: 카테고리
+        - combobox "카테고리" [ref=e256]:
+          - option "미지정"
+          - option "업무" [selected]
+          - option "개인"
+      - generic [ref=e257]:
+        - button "취소" [ref=e258] [cursor=pointer]
+        - button "저장" [ref=e259] [cursor=pointer]
+    - button "삭제" [ref=e261] [cursor=pointer]
+    - paragraph [ref=e263]: "생성일: 2026. 4. 30."

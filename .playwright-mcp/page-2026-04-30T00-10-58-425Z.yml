@@ -1,0 +1,215 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "TodoList" [ref=e5] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e6]:
+      - combobox "언어" [ref=e7]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+      - button "프로필" [ref=e11] [cursor=pointer]
+      - button "로그아웃" [ref=e12] [cursor=pointer]
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "+ 할일 추가" [ref=e16] [cursor=pointer]
+        - button "카테고리 관리" [active] [ref=e17] [cursor=pointer]
+      - generic [ref=e18]:
+        - button "목록" [ref=e19] [cursor=pointer]
+        - button "캘린더" [ref=e20] [cursor=pointer]
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "전체" [ref=e23] [cursor=pointer]
+        - button "미분류" [ref=e24] [cursor=pointer]
+        - button "업무" [ref=e37] [cursor=pointer]
+        - button "개인" [ref=e38] [cursor=pointer]
+        - button "카테고리3" [ref=e39] [cursor=pointer]
+        - button "카테고리4" [ref=e40] [cursor=pointer]
+        - button "카테고리5" [ref=e41] [cursor=pointer]
+        - button "카테고리6" [ref=e42] [cursor=pointer]
+        - button "카테고리7" [ref=e43] [cursor=pointer]
+        - button "카테고리8" [ref=e44] [cursor=pointer]
+        - button "카테고리9" [ref=e45] [cursor=pointer]
+        - button "카테고리10" [ref=e46] [cursor=pointer]
+        - button "카테고리11" [ref=e47] [cursor=pointer]
+        - button "카테고리12" [ref=e48] [cursor=pointer]
+        - button "카테고리13" [ref=e49] [cursor=pointer]
+        - button "카테고리14" [ref=e50] [cursor=pointer]
+        - button "카테고리15" [ref=e51] [cursor=pointer]
+        - button "카테고리16" [ref=e52] [cursor=pointer]
+        - button "카테고리17" [ref=e53] [cursor=pointer]
+        - button "카테고리18" [ref=e54] [cursor=pointer]
+        - button "카테고리19" [ref=e55] [cursor=pointer]
+        - button "카테고리20" [ref=e56] [cursor=pointer]
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - button "전체" [ref=e27] [cursor=pointer]
+          - button "진행 중" [ref=e28] [cursor=pointer]
+          - button "완료" [ref=e29] [cursor=pointer]
+        - button "기한 초과" [ref=e30] [cursor=pointer]
+    - list [ref=e57]:
+      - listitem [ref=e58]:
+        - button "도서관 반낙 미지정 진행 중" [ref=e59] [cursor=pointer]:
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: 도서관 반낙
+            - generic [ref=e64]:
+              - generic [ref=e65]: 미지정
+              - generic [ref=e66]: 진행 중
+      - listitem [ref=e67]:
+        - button "분기 보고서 제출 미지정 2026-04-30 진행 중" [ref=e68] [cursor=pointer]:
+          - generic [ref=e71]:
+            - paragraph [ref=e72]: 분기 보고서 제출
+            - generic [ref=e73]:
+              - generic [ref=e74]: 미지정
+              - generic [ref=e75]: 2026-04-30
+              - generic [ref=e76]: 진행 중
+      - listitem [ref=e77]:
+        - button "헬스장 등록 개인 진행 중" [ref=e78] [cursor=pointer]:
+          - generic [ref=e81]:
+            - paragraph [ref=e82]: 헬스장 등록
+            - generic [ref=e83]:
+              - generic [ref=e84]: 개인
+              - generic [ref=e85]: 진행 중
+      - listitem [ref=e86]:
+        - button "주간 보고서 작성 업무 2026-04-30 진행 중" [ref=e87] [cursor=pointer]:
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: 주간 보고서 작성
+            - generic [ref=e92]:
+              - generic [ref=e93]: 업무
+              - generic [ref=e94]: 2026-04-30
+              - generic [ref=e95]: 진행 중
+  - generic [ref=e98]:
+    - generic [ref=e99]:
+      - heading "카테고리 관리" [level=2] [ref=e100]
+      - button "닫기" [ref=e101] [cursor=pointer]:
+        - img [ref=e102]
+    - paragraph [ref=e104]: 카테고리 20 / 20
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - textbox "새 카테고리 이름" [disabled] [ref=e108]
+        - button "추가" [disabled] [ref=e109]
+      - paragraph [ref=e110]: 0 / 20
+    - list [ref=e111]:
+      - listitem [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]: 업무
+          - generic [ref=e115]:
+            - button "수정" [ref=e116] [cursor=pointer]
+            - button "삭제" [ref=e117] [cursor=pointer]
+      - listitem [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 개인
+          - generic [ref=e121]:
+            - button "수정" [ref=e122] [cursor=pointer]
+            - button "삭제" [ref=e123] [cursor=pointer]
+      - listitem [ref=e124]:
+        - generic [ref=e125]:
+          - generic [ref=e126]: 카테고리3
+          - generic [ref=e127]:
+            - button "수정" [ref=e128] [cursor=pointer]
+            - button "삭제" [ref=e129] [cursor=pointer]
+      - listitem [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]: 카테고리4
+          - generic [ref=e133]:
+            - button "수정" [ref=e134] [cursor=pointer]
+            - button "삭제" [ref=e135] [cursor=pointer]
+      - listitem [ref=e136]:
+        - generic [ref=e137]:
+          - generic [ref=e138]: 카테고리5
+          - generic [ref=e139]:
+            - button "수정" [ref=e140] [cursor=pointer]
+            - button "삭제" [ref=e141] [cursor=pointer]
+      - listitem [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]: 카테고리6
+          - generic [ref=e145]:
+            - button "수정" [ref=e146] [cursor=pointer]
+            - button "삭제" [ref=e147] [cursor=pointer]
+      - listitem [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: 카테고리7
+          - generic [ref=e151]:
+            - button "수정" [ref=e152] [cursor=pointer]
+            - button "삭제" [ref=e153] [cursor=pointer]
+      - listitem [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 카테고리8
+          - generic [ref=e157]:
+            - button "수정" [ref=e158] [cursor=pointer]
+            - button "삭제" [ref=e159] [cursor=pointer]
+      - listitem [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e162]: 카테고리9
+          - generic [ref=e163]:
+            - button "수정" [ref=e164] [cursor=pointer]
+            - button "삭제" [ref=e165] [cursor=pointer]
+      - listitem [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]: 카테고리10
+          - generic [ref=e169]:
+            - button "수정" [ref=e170] [cursor=pointer]
+            - button "삭제" [ref=e171] [cursor=pointer]
+      - listitem [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]: 카테고리11
+          - generic [ref=e175]:
+            - button "수정" [ref=e176] [cursor=pointer]
+            - button "삭제" [ref=e177] [cursor=pointer]
+      - listitem [ref=e178]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: 카테고리12
+          - generic [ref=e181]:
+            - button "수정" [ref=e182] [cursor=pointer]
+            - button "삭제" [ref=e183] [cursor=pointer]
+      - listitem [ref=e184]:
+        - generic [ref=e185]:
+          - generic [ref=e186]: 카테고리13
+          - generic [ref=e187]:
+            - button "수정" [ref=e188] [cursor=pointer]
+            - button "삭제" [ref=e189] [cursor=pointer]
+      - listitem [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e192]: 카테고리14
+          - generic [ref=e193]:
+            - button "수정" [ref=e194] [cursor=pointer]
+            - button "삭제" [ref=e195] [cursor=pointer]
+      - listitem [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]: 카테고리15
+          - generic [ref=e199]:
+            - button "수정" [ref=e200] [cursor=pointer]
+            - button "삭제" [ref=e201] [cursor=pointer]
+      - listitem [ref=e202]:
+        - generic [ref=e203]:
+          - generic [ref=e204]: 카테고리16
+          - generic [ref=e205]:
+            - button "수정" [ref=e206] [cursor=pointer]
+            - button "삭제" [ref=e207] [cursor=pointer]
+      - listitem [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: 카테고리17
+          - generic [ref=e211]:
+            - button "수정" [ref=e212] [cursor=pointer]
+            - button "삭제" [ref=e213] [cursor=pointer]
+      - listitem [ref=e214]:
+        - generic [ref=e215]:
+          - generic [ref=e216]: 카테고리18
+          - generic [ref=e217]:
+            - button "수정" [ref=e218] [cursor=pointer]
+            - button "삭제" [ref=e219] [cursor=pointer]
+      - listitem [ref=e220]:
+        - generic [ref=e221]:
+          - generic [ref=e222]: 카테고리19
+          - generic [ref=e223]:
+            - button "수정" [ref=e224] [cursor=pointer]
+            - button "삭제" [ref=e225] [cursor=pointer]
+      - listitem [ref=e226]:
+        - generic [ref=e227]:
+          - generic [ref=e228]: 카테고리20
+          - generic [ref=e229]:
+            - button "수정" [ref=e230] [cursor=pointer]
+            - button "삭제" [ref=e231] [cursor=pointer]

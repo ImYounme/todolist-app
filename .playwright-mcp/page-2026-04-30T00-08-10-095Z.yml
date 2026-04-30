@@ -1,0 +1,39 @@
+- generic [ref=e66]:
+  - banner [ref=e67]:
+    - link "TodoList" [ref=e68] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e69]:
+      - combobox "언어" [ref=e70]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+      - button "프로필" [ref=e74] [cursor=pointer]
+      - button "로그아웃" [ref=e75] [cursor=pointer]
+  - main [ref=e76]:
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - button "+ 할일 추가" [ref=e79] [cursor=pointer]
+        - button "카테고리 관리" [ref=e80] [cursor=pointer]
+      - generic [ref=e81]:
+        - button "목록" [ref=e82] [cursor=pointer]
+        - button "캘린더" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "전체" [ref=e86] [cursor=pointer]
+        - button "미분류" [active] [ref=e87] [cursor=pointer]
+        - button "업무" [ref=e115] [cursor=pointer]
+        - button "개인" [ref=e123] [cursor=pointer]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - button "전체" [ref=e90] [cursor=pointer]
+          - button "진행 중" [ref=e91] [cursor=pointer]
+          - button "완료" [ref=e92] [cursor=pointer]
+        - button "기한 초과" [ref=e93] [cursor=pointer]
+    - generic [ref=e397]:
+      - paragraph [ref=e517]: 조건에 맞는 할일이 없습니다.
+      - button "TodoList 추가" [ref=e518] [cursor=pointer]:
+        - img [ref=e520]
+        - text: TodoList 추가

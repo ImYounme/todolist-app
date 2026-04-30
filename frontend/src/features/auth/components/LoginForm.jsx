@@ -38,7 +38,7 @@ export function LoginForm({ onSubmit, isLoading, serverError }) {
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-text-primary mb-1" htmlFor="login-email">
+        <label className="block text-sm font-medium text-text-primary dark:text-gray-100 mb-1" htmlFor="login-email">
           {t('auth.email')}
         </label>
         <input
@@ -59,7 +59,7 @@ export function LoginForm({ onSubmit, isLoading, serverError }) {
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-text-primary mb-1" htmlFor="login-password">
+        <label className="block text-sm font-medium text-text-primary dark:text-gray-100 mb-1" htmlFor="login-password">
           {t('auth.password')}
         </label>
         <input
@@ -93,7 +93,7 @@ export function LoginForm({ onSubmit, isLoading, serverError }) {
         {isLoading ? t('common.processing') : t('auth.loginButton')}
       </button>
 
-      <p className="mt-6 text-center text-sm text-text-secondary">
+      <p className="mt-6 text-center text-sm text-text-secondary dark:text-gray-300">
         {t('auth.noAccount')}{' '}
         <Link to={ROUTES.SIGNUP} className="text-primary hover:underline">
           {t('auth.signupLink')}

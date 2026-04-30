@@ -1,0 +1,19 @@
+- generic [ref=e4]:
+  - link "TodoList" [ref=e5] [cursor=pointer]:
+    - /url: /
+  - paragraph [ref=e6]: 회원가입
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: 이메일
+      - textbox "이메일" [ref=e10]:
+        - /placeholder: user@example.com
+        - text: cheolsu.20260430@example.com
+    - generic [ref=e11]:
+      - generic [ref=e12]: 비밀번호
+      - textbox "비밀번호" [ref=e13]: Password123!
+    - alert [ref=e17]: 이미 사용 중인 이메일입니다.
+    - button "회원가입" [ref=e14] [cursor=pointer]
+    - paragraph [ref=e15]:
+      - text: 이미 계정이 있나요?
+      - link "로그인" [ref=e16] [cursor=pointer]:
+        - /url: /login

@@ -12,6 +12,7 @@ export function OverdueFilter() {
       type="button"
       onClick={() => !isDisabled && setShowOverdue(!showOverdue)}
       disabled={isDisabled}
+      aria-pressed={!isDisabled && showOverdue}
       className={`px-3 py-1.5 text-xs rounded-full whitespace-nowrap transition-colors ${
         isDisabled
           ? 'opacity-50 cursor-not-allowed bg-bg-gray dark:bg-transparent text-text-muted dark:text-gray-500'

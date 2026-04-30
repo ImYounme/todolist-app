@@ -1,0 +1,50 @@
+- generic [ref=e66]:
+  - banner [ref=e67]:
+    - link "TodoList" [ref=e68] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e69]:
+      - combobox "언어" [ref=e70]:
+        - option "한국어" [selected]
+        - option "English"
+        - option "日本語"
+        - option "中文"
+      - button "다크 모드로切换" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+      - button "프로필" [ref=e74] [cursor=pointer]
+      - button "로그아웃" [ref=e75] [cursor=pointer]
+  - main [ref=e76]:
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - button "+ 할일 추가" [ref=e79] [cursor=pointer]
+        - button "카테고리 관리" [ref=e80] [cursor=pointer]
+      - generic [ref=e81]:
+        - button "목록" [ref=e82] [cursor=pointer]
+        - button "캘린더" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "전체" [ref=e86] [cursor=pointer]
+        - button "미분류" [ref=e87] [cursor=pointer]
+        - button "업무" [ref=e115] [cursor=pointer]
+        - button "개인" [ref=e123] [cursor=pointer]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - button "전체" [active] [ref=e90] [cursor=pointer]
+          - button "진행 중" [ref=e91] [cursor=pointer]
+          - button "완료" [ref=e92] [cursor=pointer]
+        - button "기한 초과" [ref=e93] [cursor=pointer]
+    - list [ref=e292]:
+      - listitem [ref=e293]:
+        - button "헬스장 등록 개인 진행 중" [ref=e294] [cursor=pointer]:
+          - generic [ref=e297]:
+            - paragraph [ref=e298]: 헬스장 등록
+            - generic [ref=e299]:
+              - generic [ref=e300]: 개인
+              - generic [ref=e301]: 진행 중
+      - listitem [ref=e302]:
+        - button "주간 보고서 작성 업무 2026-04-30 진행 중" [ref=e303] [cursor=pointer]:
+          - generic [ref=e306]:
+            - paragraph [ref=e307]: 주간 보고서 작성
+            - generic [ref=e308]:
+              - generic [ref=e309]: 업무
+              - generic [ref=e310]: 2026-04-30
+              - generic [ref=e311]: 진행 중

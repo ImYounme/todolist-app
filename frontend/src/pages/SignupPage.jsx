@@ -14,15 +14,17 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-bg-gray">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-sm p-8">
-        <Link
-          to="/"
-          className="block text-xl font-semibold text-text-primary mb-1 hover:text-primary transition-colors"
-        >
-          {t('app.name')}
-        </Link>
-        <p className="text-sm text-text-secondary mb-6">{t('auth.signup')}</p>
+    <div className="min-h-screen flex items-center justify-center bg-slate-100 dark:bg-gray-950 px-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl border border-slate-200 dark:border-gray-700 shadow-xl shadow-slate-200/70 dark:shadow-black/30 p-8">
+        <div className="mb-7 text-center">
+          <Link
+            to="/"
+            className="inline-block text-2xl font-semibold text-text-primary dark:text-white hover:text-primary transition-colors"
+          >
+            {t('app.name')}
+          </Link>
+          <p className="mt-2 text-sm text-text-secondary dark:text-gray-400">{t('auth.signup')}</p>
+        </div>
         <SignupForm
           onSubmit={handleSubmit}
           isLoading={isPending}

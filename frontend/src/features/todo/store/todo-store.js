@@ -8,10 +8,10 @@ export const useTodoStore = create((set) => ({
   isCreateModalOpen: false,
   selectedTodoId: null,
   setSelectedCategoryId: (id) => set({ selectedCategoryId: id, showUncategorized: false }),
-  setSelectedStatusTab: (tab) => set((state) => ({
+  setSelectedStatusTab: (tab) => set({
     selectedStatusTab: tab,
-    showOverdue: tab === 'done' ? false : state.showOverdue,
-  })),
+    showOverdue: false,
+  }),
   setShowUncategorized: (value) => set({ showUncategorized: value, selectedCategoryId: null }),
   setShowOverdue: (value) => set({ showOverdue: value }),
   setIsCreateModalOpen: (open) => set({ isCreateModalOpen: open }),
