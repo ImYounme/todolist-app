@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const swaggerUi = require('swagger-ui-express');
-const { errorHandler } = require('./src/middlewares/error.middleware');
+const { errorHandler } = require('./middlewares/error.middleware');
 
 const app = express();
 
@@ -37,7 +37,7 @@ app.get('/health', (req, res) => {
 });
 
 // Swagger UI
-const swaggerDocument = require('../swagger/swagger.json');
+const swaggerDocument = require('../../swagger/swagger.json');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
   customCss: '.swagger-ui .top-bar { display: none }',
   customSiteTitle: 'TodoList API Docs',
@@ -45,10 +45,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
 }));
 
 // 도메인 라우터
-app.use('/api/auth', require('./src/routes/auth.router'));
-app.use('/api/profile', require('./src/routes/profile.router'));
-app.use('/api/categories', require('./src/routes/category.router'));
-app.use('/api/todos', require('./src/routes/todo.router'));
+app.use('/api/auth', require('./routes/auth.router'));
+app.use('/api/profile', require('./routes/profile.router'));
+app.use('/api/categories', require('./routes/category.router'));
+app.use('/api/todos', require('./routes/todo.router'));
 
 app.use((req, res) => {
   res.status(404).json({
