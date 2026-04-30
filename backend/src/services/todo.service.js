@@ -67,7 +67,7 @@ async function getTodos(userId, filters = {}) {
 async function getTodo(userId, todoId) {
   const todo = await todoRepository.findTodoById(todoId);
   if (!todo) {
-    throw new NotFoundError('???쇱쓣 李얠쓣 ???놁뒿?덈떎.');
+    throw new NotFoundError('할 일을 찾을 수 없습니다.');
   }
   if (todo.user_id !== userId) {
     throw new ForbiddenError();

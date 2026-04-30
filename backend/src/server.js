@@ -4,7 +4,6 @@ require('dotenv').config();
 
 const REQUIRED_ENV_VARS = [
   'NODE_ENV',
-  'PORT',
   'DATABASE_URL',
   'JWT_SECRET',
   'JWT_EXPIRES_IN',
@@ -20,15 +19,16 @@ for (const varName of REQUIRED_ENV_VARS) {
 
 const app = require('./app');
 
-const PORT = process.env.PORT;
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  const httpServer = app.listen(PORT, () => {
+    console.log(`[server] 서버 실행 중 — port ${PORT}, env ${process.env.NODE_ENV}`);
+  });
 
-const httpServer = app.listen(PORT, () => {
-  console.log(`[server] 서버 실행 중 — port ${PORT}, env ${process.env.NODE_ENV}`);
-});
+  process.on('unhandledRejection', (reason) => {
+    console.error('[server] unhandledRejection:', reason);
+    httpServer.close(() => process.exit(1));
+  });
+}
 
-process.on('unhandledRejection', (reason) => {
-  console.error('[server] unhandledRejection:', reason);
-  httpServer.close(() => process.exit(1));
-});
-
-module.exports = httpServer;
+module.exports = app;

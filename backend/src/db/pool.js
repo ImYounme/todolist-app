@@ -5,6 +5,9 @@ const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   statement_cache: 0,
+  max: 2,
+  idleTimeoutMillis: 5000,
+  connectionTimeoutMillis: 5000,
 });
 
 pool.on('error', (err) => {

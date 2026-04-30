@@ -2,7 +2,6 @@
 
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const swaggerUi = require('swagger-ui-express');
 const { errorHandler } = require('./middlewares/error.middleware');
 
@@ -37,7 +36,7 @@ app.get('/health', (req, res) => {
 });
 
 // Swagger UI
-const swaggerDocument = require('../../swagger/swagger.json');
+const swaggerDocument = require('../swagger/swagger.json');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
   customCss: '.swagger-ui .top-bar { display: none }',
   customSiteTitle: 'TodoList API Docs',
