@@ -25,7 +25,6 @@ export default function LoginPage() {
           </Link>
           <p className="mt-2 text-sm text-text-secondary dark:text-gray-400">{t('auth.login')}</p>
         </div>
-        로그인22
         <LoginForm
           onSubmit={handleSubmit}
           isLoading={isPending}
