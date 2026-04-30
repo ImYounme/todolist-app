@@ -1,6 +1,9 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "env": {
+    "VITE_API_BASE_URL": "https://be-lym.vercel.app"
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
